@@ -25,22 +25,19 @@ def contents_of_file(filename):
     create_file(filename)
 
     # Open the file
-    with open(filename, 'r') as file:
-        # Read the rows of the file
-        rows = csv.reader(file)
-        
-        # Skip the header row
-        next(rows)
-        
-        # Process each row
-        for row in rows:
-            name, color, type_ = row
-            # Format the return string for data rows only
-            return_string += "a {} {} is {}\n".format(color, name, type_)
+    with open(filename, "r") as file:
+        # Read the rows of the file into a dictionary
+        csv_reader = csv.DictReader(file)
+
+        # Process each item of the dictionary
+        for row in csv_reader:
+            return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
+    
     return return_string
 
 # Call the function
 print(contents_of_file("flowers.csv"))
+
 
 
 #Question 2
