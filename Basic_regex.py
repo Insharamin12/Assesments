@@ -33,3 +33,11 @@ print(check_time("9:59 AM")) # True
 print(check_time("6:60am")) # False
 print(check_time("five o'clock")) # False
 
+
+#The contains_acronym function checks the text for the presence of 2 or more characters or digits surrounded by parentheses,
+#with at least the first character in uppercase (if it's a letter), returning True if the condition is met, or False otherwise.
+#For example, "Instant messaging (IM) is a set of communication technologies used for text-based communication"
+#should return True since (IM) satisfies the match conditions." Fill in the regular expression in this function: 
+
+
+
