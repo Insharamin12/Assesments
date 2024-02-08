@@ -5,7 +5,7 @@
 
 import re
 def transform_record(record):
-  new_record = re.sub(r"(\d{3}-\d{3}-\d{4})", r"+1-\1", record)
+  new_record = re.sub(r"(\d{3}-\d{3,})", r"+1-\1", record)
   return new_record
 
 print(transform_record("Sabrina Green,802-867-5309,System Administrator")) 
